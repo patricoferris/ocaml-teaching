@@ -7,12 +7,18 @@ This repository contains docker images for use in OCaml teaching environments (o
   - Libraries: dune, merlin, utop, jupyter, ocp-indent
   - Inclusion of RISE for automatic presentation mode
 
+The Dockerfiles are available from dockerhub: 
+
+```sh
+docker run -it -p 8888:8888 patricoferris/ocaml-teaching:4.10
+```
+
 ### Jupyter 
 
 For a simple setup without coding in a docker container you can run a jupyter notebook. 
 
 ```
-docker run -it -p 8888:8888 -v $(pwd)/notebooks:/notebooks patricoferris/ocaml-teaching
+docker run -it -p 8888:8888 -v $(pwd)/notebooks:/notebooks patricoferris/ocaml-teaching:4.10
 jupyter notebook --ip=0.0.0.0 
 ```
 
