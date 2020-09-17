@@ -1,0 +1,33 @@
+(executable
+ (name docker)
+ (libraries dockerfile))
+
+(rule
+ (with-stdout-to
+  docker8.output
+  (run ./docker.exe "4.08")))
+
+(rule
+ (with-stdout-to
+  docker9.output
+  (run ./docker.exe "4.09")))
+
+(rule
+ (with-stdout-to
+  docker10.output
+  (run ./docker.exe "4.10")))
+
+(rule
+ (alias docker)
+ (action
+  (diff dockerfiles/4.08/Dockerfile docker8.output)))
+
+(rule
+ (alias docker)
+ (action
+  (diff dockerfiles/4.09/Dockerfile docker9.output)))
+
+(rule
+ (alias docker)
+ (action
+  (diff dockerfiles/4.10/Dockerfile docker10.output)))
