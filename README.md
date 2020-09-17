@@ -1,5 +1,5 @@
-OCaml for Learning
-------------------
+OCaml for Teaching & Learning
+-----------------------------
 
 This repository contains docker images for use in OCaml teaching environments (or for learning) heavily based on @kayceesrk's [cs3100_f19](https://github.com/kayceesrk/cs3100_f19) course images. They can be used for either Jupyter Notebooks or as standalone environments for coding in OCaml. To remain fairly small they come with a limited number of tools installed: 
 
