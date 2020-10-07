@@ -4,11 +4,6 @@
 
 (rule
  (with-stdout-to
-  docker8.output
-  (run ./docker.exe "4.08")))
-
-(rule
- (with-stdout-to
   docker9.output
   (run ./docker.exe "4.09")))
 
@@ -18,9 +13,9 @@
   (run ./docker.exe "4.10")))
 
 (rule
- (alias docker)
- (action
-  (diff dockerfiles/4.08/Dockerfile docker8.output)))
+ (with-stdout-to
+  docker11.output
+  (run ./docker.exe "4.11")))
 
 (rule
  (alias docker)
@@ -31,3 +26,8 @@
  (alias docker)
  (action
   (diff dockerfiles/4.10/Dockerfile docker10.output)))
+
+(rule
+ (alias docker)
+ (action
+  (diff dockerfiles/4.11/Dockerfile docker11.output)))

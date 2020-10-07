@@ -1,4 +1,4 @@
-FROM ocaml/opam2:4.09
+FROM ocaml/opam2:4.11
 RUN sudo apt-get update && sudo apt-get install -y python3-pip libgmp-dev perl pkg-config libcairo2-dev libzmq3-dev m4 vim-nox emacs
 RUN pip3 install jupyter
 ENV PATH $PATH:/home/opam/.local/bin

@@ -12,6 +12,6 @@ RUN echo "filetype plugin on" >> ~/.vimrc && echo "set omnifunc=syntaxcomplete#C
 RUN opam exec -- ocaml-jupyter-opam-genspec
 RUN jupyter kernelspec install --name ocaml-jupyter "$(opam config var share)/jupyter" --user
 # Install RISE Presentation Tools
-RUN pip3 install RISE
+RUN pip3 install RISE nbgrader
 RUN jupyter-nbextension enable rise --py
 WORKDIR /notebooks
